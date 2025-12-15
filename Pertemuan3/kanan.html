@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title> Belajar Membuat Form </title>
+</head>
+
+<body>
+    <b>Data Mahasiswa Informatika:</b>
+    <form method="post" action="data.html">
+        <table>
+            <tr>
+                <td><label for="naleng">Nama Lengkap:</label></td><td><input type="text" id="naleng" name="naleng" style="width:200px"><br></td>
+                <td style="width:50px"></td>
+                <td><label for="napang">Nama Panggilan:</label></td><td><input type="text" id="napang" name="napang" style="width:200px"><br></td>
+            </tr>
+            <tr>
+                <td><label for="nrp">NRP:</label></td><td><input type="text" id="nrp" name="nrp" pattern="[0-9]{10}" maxlength="10" style="width:200px"><br></td>
+                <td style="width:50px"></td>
+                <td><label for="notelp">No. Telepon:</label></td><td><input type="text" id="notelp" name="notelp" pattern="[0-9]{10,13}" minlength="10" maxlength="13" style="width:200px"><br></td>
+            </tr>
+            <tr>
+                <td><label for="jurusan">Jurusan:</label></td><td>
+                    <select id="jurusan" name="jurusan">
+                    <option value="tinf"> Teknik Informatika </option>
+                    <option value="rka"> Rekayasa Kecerdasan Artifisial </option>
+                    <option value="rpl"> Rekayasa Perangkat Lunak </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><label for="bprogram">Bahasa yang Dikuasai:</label></td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="c"> C </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="cpp"> C++ </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="python"> Python </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="java"> Java </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="csharp"> C# </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="javascript"> JavaScript </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="ruby"> Ruby </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="php"> PHP </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="kotlin"> Kotlin </td>
+                <td><input type="checkbox" id="bprogram" name="bprogram" value="rust"> Rust </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Simpan" name="t1">
+        <input type="reset" value="Reset" name="t2">
+    </form>
+</body>

@@ -1,0 +1,89 @@
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #4f46e5, #0ea5e9, #020617);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.auth-wrapper {
+    max-width: 960px;
+    width: 100%;
+}
+
+.auth-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.6);
+    background: #0b1120;
+}
+
+.auth-illustration {
+    background: url("https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=1200")
+        center/cover no-repeat;
+    position: relative;
+}
+
+.auth-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(37, 99, 235, 0.8));
+}
+
+.logo-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #e5e7eb;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.nav-pills .nav-link {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.form-control,
+.form-check-input {
+    border-radius: 999px;
+}
+
+.btn-primary {
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+    opacity: 0.3;
+}
+
+@media (max-width: 767.98px) {
+    .auth-illustration {
+        display: none;
+    }
+
+    .auth-card {
+        border-radius: 20px;
+    }
+}

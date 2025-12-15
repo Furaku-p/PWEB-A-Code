@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+
+    <!--Ini Bootstrapnya-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Ini CSS-nya-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-wrapper px-3 px-md-0">
+        <div class="row g-0 auth-card">
+
+            <!-- Kotak Sebelah kanan Login Page -->
+            <div class="col-md-5 auth-illustration text-white p-4 p-md-5">
+                <div class="auth-overlay"></div>
+                <div class="auth-illustration-content h-100 d-flex flex-column justify-content-between">
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="logo-circle">UI</div>
+                        <div>
+                            <h6 class="mb-0 fw-semibold">Aurora</h6>
+                            <small class="text-white-50">Dashboard</small>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h2 class="fw-bold mb-3">Selamat Datang di Halaman Saya.</h2>
+                        <p class="text-white-75 mb-4">
+                            Ini Merupakan Tugas Membuat Login Page menggunakan Bootstrap.
+                        </p>
+                        <ul class="list-unstyled small text-white-75">
+                            <li>• Login Page</li>
+                            <li>• Masuk ke Konten Jika berhasil login</li>
+                            <li>• Akun Dummy : admin@gmail.com</li>
+                            <li>• Password Dummy : 1234</li>
+                        </ul>
+                    </div>
+
+                    <p class="small text-white-50 mb-0">&copy; 2024 Aurora UI</p>
+                </div>
+            </div>
+
+            <!-- Bagian Formsnya -->
+            <div class="col-md-7 bg-white p-4 p-md-5">
+
+                <!-- Tabs -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="nav nav-pills bg-light p-1 rounded-pill" id="pills-tab" role="tablist">
+                        <button class="nav-link active px-4 py-2" id="pills-login-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-login">
+                            Login
+                        </button>
+                        <button class="nav-link px-4 py-2" id="pills-register-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-register">
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+
+                    <!-- LOGIN -->
+                    <div class="tab-pane fade show active" id="pills-login">
+                        <h3 class="fw-bold mb-2">Welcome back 👋</h3>
+                        <p class="text-muted mb-3">Masuk untuk melanjutkan ke dashboard kamu.</p>
+
+                        <!-- ALERT ERROR / SUCCESS -->
+                        <div id="loginAlert" class="alert d-none" role="alert"></div>
+
+                        <!-- FORM LOGIN -->
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Email address</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small text-muted d-flex justify-content-between">
+                                    <span>Password</span>
+                                    <a href="#" class="text-decoration-none">Forgot password?</a>
+                                </label>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label small" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                                SIGN IN
+                            </button>
+
+                            <div class="divider mb-3">Or continue with</div>
+                            
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary w-50">Google</button>
+                                <button type="button" class="btn btn-outline-secondary w-50">GitHub</button>
+                            </div>
+
+                            <p class="mt-4 text-center small text-muted">
+                                Belum punya akun?
+                                <a href="#" onclick="document.getElementById('pills-register-tab').click()">Daftar sekarang</a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- REGISTER -->
+                    <div class="tab-pane fade" id="pills-register">
+                        <h3 class="fw-bold mb-2">Create account ✨</h3>
+                        <p class="text-muted mb-4">Daftar gratis, proses cepat!</p>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small text-muted">First name</label>
+                                    <input type="text" class="form-control" placeholder="John">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small text-muted">Last name</label>
+                                    <input type="text" class="form-control" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Display name</label>
+                                <input type="text" class="form-control" placeholder="johndoe">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Email address</label>
+                                <input type="email" class="form-control" placeholder="you@example.com">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small text-muted">Password</label>
+                                    <input type="password" class="form-control" placeholder="••••••••">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small text-muted">Confirm Password</label>
+                                    <input type="password" class="form-control" placeholder="••••••••">
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="agree">
+                                <label class="form-check-label small" for="agree">
+                                    I agree to the Terms & Conditions.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                                CREATE ACCOUNT
+                            </button>
+
+                            <p class="text-center small text-muted">
+                                Sudah punya akun?
+                                <a href="#" onclick="document.getElementById('pills-login-tab').click()">Masuk di sini</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DUMMY LOGIN SCRIPT -->
+    <script>
+
+        // Dummy akun
+        const DUMMY_EMAIL = "admin@gmail.com";
+        const DUMMY_PASSWORD = "1234";
+
+        const loginForm = document.getElementById("loginForm");
+        const loginEmail = document.getElementById("loginEmail");
+        const loginPassword = document.getElementById("loginPassword");
+        const loginAlert = document.getElementById("loginAlert");
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // biar ga reload halaman
+
+            const email = loginEmail.value.trim();
+            const password = loginPassword.value.trim();
+
+            // reset state
+            loginAlert.classList.add("d-none");
+            loginAlert.classList.remove("alert-danger", "alert-success");
+            loginEmail.classList.remove("is-invalid");
+            loginPassword.classList.remove("is-invalid");
+
+            if (email === DUMMY_EMAIL && password === DUMMY_PASSWORD) {
+                // LOGIN BERHASIL
+                loginAlert.textContent = "Login berhasil!";
+                loginAlert.classList.remove("d-none");
+                loginAlert.classList.add("alert-success");
+
+                // redirect ke halaman konten
+                window.location.href = "konten.html";
+
+            } else {
+                // LOGIN GAGAL
+                loginAlert.textContent = "Email atau password salah.";
+                loginAlert.classList.remove("d-none");
+                loginAlert.classList.add("alert-danger");
+
+                loginEmail.classList.add("is-invalid");
+                loginPassword.classList.add("is-invalid");
+                }
+        });
+        
+    </script>
+
+</body>
+</html>

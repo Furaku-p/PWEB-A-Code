@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* biar ga ketiban elemen lain */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body {
+    padding-top: 70px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #2563eb;
+    font-size: 1.1rem;
+}
+
+.account-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    color: #333;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.account-icon:hover {
+    transform: scale(1.1);
+    color: #2563eb;
+}
+
+.account-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-box {
+    width: 20px;
+    height: 20px;
+    background: #2563eb;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.hero .sub {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fff;
+    color: #2563eb;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+.btn-primary:hover {
+    background: #f1f5f9;
+    transform: scale(1.05);
+}
+
+/* Info cards */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    padding: 0 10%;
+}
+.info-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 200px;
+}
+
+.info-card h3 {
+    margin: 10px 0;
+}
+
+/* Topics */
+.topics {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 0 10%;
+}
+.topic {
+    text-align: center;
+    transition: transform 0.3s;
+}
+.topic .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+.topic:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px;
+}
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 10%;
+    border-top: 1px solid #ddd;
+}
+footer .socials a {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.fade-in.delay { animation-delay: 0.3s; }
+.fade-in.delay2 { animation-delay: 0.6s; }
+.fade-in.delay3 { animation-delay: 0.9s; }
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s forwards;
+}
+.slide-up.delay { animation-delay: 0.4s; }
+.slide-up.delay2 { animation-delay: 0.8s; }
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}

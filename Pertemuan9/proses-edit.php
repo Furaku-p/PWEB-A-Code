@@ -2,8 +2,8 @@
 require_once "config.php";
 
 if (!isset($_POST['simpan'])) {
-  header("Location: list-siswa.php?msg=error");
-  exit;
+    header("Location: list-siswa.php?msg=error");
+    exit;
 }
 
 $id            = (int)($_POST['id'] ?? 0);
@@ -14,8 +14,8 @@ $agama         = trim($_POST['agama'] ?? "");
 $sekolah_asal  = trim($_POST['sekolah_asal'] ?? "");
 
 if ($id <= 0 || $nama === "" || $alamat === "" || $jenis_kelamin === "" || $agama === "" || $sekolah_asal === "") {
-  header("Location: list-siswa.php?msg=error");
-  exit;
+    header("Location: list-siswa.php?msg=error");
+    exit;
 }
 
 $stmt = $db->prepare("UPDATE siswa SET nama=?, alamat=?, jenis_kelamin=?, agama=?, sekolah_asal=? WHERE id=?");
